@@ -270,10 +270,10 @@ namespace QuantBox.OQ.Esunny
         #region 市场信息包
         private void OnRspMarketInfo(IntPtr pQuotApi, IntPtr pBuffer, ref MarketInfo pMarketInfo, int bLast)
         {
-            IntPtr ptrHead = (IntPtr)(pBuffer + Marshal.SizeOf(typeof(MarketInfo)));
+            IntPtr ptrHead = (IntPtr)((int)pBuffer + Marshal.SizeOf(typeof(MarketInfo)));
             for (int i = 0; i < pMarketInfo.stocknum; ++i)
             {
-                IntPtr ptr = (IntPtr)(ptrHead + Marshal.SizeOf(typeof(StockInfo)) * i);
+                IntPtr ptr = (IntPtr)((int)ptrHead + Marshal.SizeOf(typeof(StockInfo)) * i);
                 StockInfo si = (StockInfo)Marshal.PtrToStructure(ptr, typeof(StockInfo));
                 StockInfoEx sie = new StockInfoEx()
                 {

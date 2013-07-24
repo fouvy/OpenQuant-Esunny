@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>QuantBox.OQ.Esunny</RootNamespace>
     <AssemblyName>QuantBox.OQ.Esunny</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -18,7 +18,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\..\..\..\Program Files %28x86%29\SmartQuant Ltd\OpenQuant\Framework\bin\</OutputPath>
+    <OutputPath>bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -32,32 +32,34 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NLog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL" />
+    <Reference Include="NLog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\NLog.dll</HintPath>
+    </Reference>
     <Reference Include="QuantBox.CSharp2Esunny">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\SmartQuant Ltd\OpenQuant\Bin\QuantBox.CSharp2Esunny.dll</HintPath>
+      <HintPath>..\..\lib\QuantBox.CSharp2Esunny.dll</HintPath>
     </Reference>
     <Reference Include="SmartQuant, Version=1.0.3762.22305, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\reference\using\SmartQuant.dll</HintPath>
+      <HintPath>..\..\lib\SmartQuant.dll</HintPath>
     </Reference>
     <Reference Include="SmartQuant.Data">
-      <HintPath>..\reference\using\SmartQuant.Data.dll</HintPath>
+      <HintPath>..\..\lib\SmartQuant.Data.dll</HintPath>
     </Reference>
     <Reference Include="SmartQuant.Execution, Version=1.0.3762.22307, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\reference\using\SmartQuant.Execution.dll</HintPath>
+      <HintPath>..\..\lib\SmartQuant.Execution.dll</HintPath>
     </Reference>
     <Reference Include="SmartQuant.FIX, Version=1.0.3762.22302, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\reference\using\SmartQuant.FIX.dll</HintPath>
+      <HintPath>..\..\lib\SmartQuant.FIX.dll</HintPath>
     </Reference>
     <Reference Include="SmartQuant.Instruments, Version=1.0.3762.22306, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\reference\using\SmartQuant.Instruments.dll</HintPath>
+      <HintPath>..\..\lib\SmartQuant.Instruments.dll</HintPath>
     </Reference>
     <Reference Include="SmartQuant.Providers, Version=1.0.3762.22306, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\reference\using\SmartQuant.Providers.dll</HintPath>
+      <HintPath>..\..\lib\SmartQuant.Providers.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

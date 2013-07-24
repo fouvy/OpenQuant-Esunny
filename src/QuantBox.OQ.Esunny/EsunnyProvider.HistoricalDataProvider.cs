@@ -306,10 +306,10 @@ namespace QuantBox.OQ.Esunny
                 DateTime datetime = DateTime.Now;
                 DateTime updatetime = DateTime.Now;
 
-                IntPtr ptrHead = (IntPtr)(pBuffer + Marshal.SizeOf(typeof(STKTRACEDATA)));
+                IntPtr ptrHead = (IntPtr)((int)pBuffer + Marshal.SizeOf(typeof(STKTRACEDATA)));
                 for (int i = 0; i < pTraceData.nCount; ++i)
                 {
-                    IntPtr ptr = (IntPtr)(ptrHead + Marshal.SizeOf(typeof(STOCKTRACEDATA)) * i);
+                    IntPtr ptr = (IntPtr)((int)ptrHead + Marshal.SizeOf(typeof(STOCKTRACEDATA)) * i);
                     STOCKTRACEDATA std = (STOCKTRACEDATA)Marshal.PtrToStructure(ptr, typeof(STOCKTRACEDATA));
 
                     DateTime dt = Convert.ToDateTime(std.time);
@@ -455,10 +455,10 @@ namespace QuantBox.OQ.Esunny
             {
                 HistoricalDataRequest request = dr.request;
 
-                IntPtr ptrHead = (IntPtr)(pBuffer + Marshal.SizeOf(typeof(STKHISDATA)));
+                IntPtr ptrHead = (IntPtr)((int)pBuffer + Marshal.SizeOf(typeof(STKHISDATA)));
                 for (int i = 0; i < pHisData.nCount; ++i)
                 {
-                    IntPtr ptr = (IntPtr)(ptrHead + Marshal.SizeOf(typeof(HISTORYDATA)) * i);
+                    IntPtr ptr = (IntPtr)((int)ptrHead + Marshal.SizeOf(typeof(HISTORYDATA)) * i);
                     HISTORYDATA hd = (HISTORYDATA)Marshal.PtrToStructure(ptr, typeof(HISTORYDATA));
 
                     if (request.DataType == HistoricalDataType.Daily)
