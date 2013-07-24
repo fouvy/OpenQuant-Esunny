@@ -8,5 +8,6 @@
 
 ## 安装
 QD根目录\ini\framework.xml添加
-<plugin enabled="True" assembly="QuantBox.OQ.Esunny" type="QuantBox.OQ.Esunny.EsunnyProvider" />
+`<plugin enabled="True" assembly="QuantBox.OQ.Esunny" type="QuantBox.OQ.Esunny.EsunnyProvider" />`
+
 动态库拷贝到QD根目录\bin文件夹下面
